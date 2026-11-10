@@ -1,0 +1,50 @@
+[
+  {
+    "gene": "PDCD1",
+    "condition": "combo",
+    "cells": 7445,
+    "scatter_area_pt2": 3,
+    "alpha": 1,
+    "edge_linewidth": 0,
+    "vmin": 0.0,
+    "vmax": 2.6756239186771515,
+    "axes_width_inches": 2.46566037735849,
+    "axes_height_inches": 1.7732027363184075
+  },
+  {
+    "gene": "HAVCR2",
+    "condition": "combo",
+    "cells": 7445,
+    "scatter_area_pt2": 3,
+    "alpha": 1,
+    "edge_linewidth": 0,
+    "vmin": 0.0,
+    "vmax": 2.647218420079264,
+    "axes_width_inches": 2.46566037735849,
+    "axes_height_inches": 1.7732027363184075
+  },
+  {
+    "gene": "TOX",
+    "condition": "combo",
+    "cells": 7445,
+    "scatter_area_pt2": 3,
+    "alpha": 1,
+    "edge_linewidth": 0,
+    "vmin": 0.0,
+    "vmax": 2.497504670715671,
+    "axes_width_inches": 2.46566037735849,
+    "axes_height_inches": 1.7732027363184075
+  },
+  {
+    "gene": "TOX",
+    "condition": "Baseline",
+    "cells": 18461,
+    "scatter_area_pt2": 3,
+    "alpha": 1,
+    "edge_linewidth": 0,
+    "vmin": 0.0,
+    "vmax": 2.497504670715671,
+    "axes_width_inches": 2.46566037735849,
+    "axes_height_inches": 1.7732027363184075
+  }
+]
