@@ -1,0 +1,14 @@
+[
+  {
+    "gene": "Module_8",
+    "condition": "combo",
+    "cells": 7445,
+    "scatter_area_pt2": 3,
+    "alpha": 1,
+    "edge_linewidth": 0,
+    "vmin": -0.08229235256210185,
+    "vmax": 1.2220180902626834,
+    "axes_width_inches": 2.46566037735849,
+    "axes_height_inches": 1.7732027363184075
+  }
+]
