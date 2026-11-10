@@ -1,0 +1,41 @@
+Nivo + Rela 绘图复现包
+
+本包独立包含必要的普通CSV数据、JSON参数、重绘代码、固定依赖版本及图注。不需要下载其他包，不需要联网获取GEO，也不依赖原工作区中的pickle/RDS文件。
+
+一、准备环境
+推荐Python 3.12。Windows可从Python官网下载并安装，安装时勾选Add Python to PATH；macOS/Linux使用已有Python 3.12亦可。
+解压整个ZIP，将所有文件保留在同一个文件夹。不要改变CSV文件名，不要只下载脚本。终端进入该文件夹。
+
+二、创建独立环境（推荐）
+运行：python -m venv .venv
+Windows命令提示符激活：.venv\Scripts\activate.bat
+Windows PowerShell可改用命令提示符操作，避免脚本执行策略问题。
+macOS/Linux激活：source .venv/bin/activate
+
+三、安装依赖
+python -m pip install -r requirements_replot.txt
+安装软件依赖需要网络；依赖装好后，重绘不需要网络。
+
+四、运行
+python replot_from_csv.py
+默认输出到本文件夹内新建的reproduced_figures目录，原输入数据不会被覆盖。
+可指定目录：python replot_from_csv.py --output-dir "my_figures"
+
+五、生成哪些图
+Figure_1_CD8_atlas_and_programs：主图1，含TOX及修订后的Effector程序。
+Figure_2_exact_Fig3E_joint_programs：主图2，拟时序第10箱版本。
+Figure_3_long_term_clinical_outcomes：主图3，独立临床研究的发表汇总值。
+Figure_S1_patient_and_threshold_sensitivity：患者与阈值敏感性。
+Figure_S2_all_tumor_CD8：全部肿瘤CD8版本。
+TOX_feature_distribution：TOX分布。
+Effector_display_audit：效应图显示方式核查。
+各图均输出300dpi PNG、PDF、SVG；另输出预览PNG。Figure 2主图编号仍对应第10箱；推荐作为主图的全体CD8图目前文件名为Figure_S2_all_tumor_CD8，未擅自改动编号。
+
+六、数据与验证
+Cells_tumor_baseline_week4.csv包含36,185个主图细胞的作者坐标、cluster、模块评分和相关表达。
+Cells_exact_Fig3E.csv包含6,062个第10箱细胞。
+Effector_original_full_TIL.csv包含37,754个旧效应图细胞的最小重绘数据。
+其他CSV是实际点图、热图、患者摘要、阈值敏感性和临床汇总值。
+本次复现是从处理后绘图数据重绘，不等于从FASTQ重新比对、推断UMAP或重新学习基因模块；临床表不是患者级随访记录。
+本包已解压到独立目录，从无关工作目录运行，核对7套PNG结果。见Validation.csv。其他系统/字体/软件版本可能导致轻微排版差异，数值与样本选择应一致。
+文件完整性可按SHA256SUMS.csv检查。
